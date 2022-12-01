@@ -11,5 +11,5 @@ for i in range(len(inputdata)):
         elfcalories.append(0)
 elfcalories.sort(reverse=True)
 
-print("Part 1, top 1 most calories:", elfcalories[1])
+print("Part 1, top 1 most calories:", elfcalories[0])
 print("Part 2, top 3 most calories:", sum(elfcalories[:3]))
