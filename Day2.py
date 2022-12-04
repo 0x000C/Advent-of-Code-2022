@@ -1,6 +1,3 @@
-# I regret not putting more work into the logic of this but I'm tired
-# right now so meh
-
 def read_data():
     with open("Inputs/Day2.txt", "r") as inputfile:
         messy_data = inputfile.readlines()
