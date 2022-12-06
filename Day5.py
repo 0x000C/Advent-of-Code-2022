@@ -4,10 +4,8 @@ def read_data(textfile):
     outputdata = [i.removesuffix('\n') for i in outputdata]
     return outputdata
 
-# Splitting the lines probably created a lot more work than it removed
 
-
-def create_table(inputdata):
+def create_table(inputdata): # Looking back, holy smokes what was I thinking.
     inputdata = [i.split("[") for i in inputdata if "[" in i]
     for i in range(len(inputdata)):
         inputdata[i].remove('')  # remove empty string elements
@@ -16,8 +14,7 @@ def create_table(inputdata):
     outputtable = []
     for i in range(len(inputdata[0])):
         outputtable.append([])  # create an output list of appropriate size
-    for i in range(
-            len(inputdata)):  # remove zeroes and transpose the matrix (⌐■_■)
+    for i in range(len(inputdata)):  # remove zeroes and transpose
         for j in range(len(inputdata[i])):
             if inputdata[i][j] != "0":
                 outputtable[j].append(inputdata[i][j])
@@ -64,7 +61,7 @@ def execute_part2_move(inputtable, inputmove):
 inputfile = "Inputs/Day5.txt"
 data = read_data(inputfile)
 datatable1 = create_table(data)
-datatable2 = create_table(data)
+datatable2 = datatable1.copy()
 moves = create_moves(data)
 
 for move in moves:
