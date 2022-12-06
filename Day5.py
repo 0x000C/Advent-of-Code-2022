@@ -5,7 +5,7 @@ def read_data(textfile):
     return outputdata
 
 
-def create_table(inputdata):  # Looking back, holy smokes what was I thinking.
+def create_table(inputdata): # Looking back, holy smokes what was I thinking.
     inputdata = [i.split("[") for i in inputdata if "[" in i]
     for i in range(len(inputdata)):
         inputdata[i].remove('')  # remove empty string elements
